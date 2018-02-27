@@ -1,0 +1,2 @@
+## **Tutoril:**  
+[Dictionaries](https://www.python-course.eu/dictionaries.php)
