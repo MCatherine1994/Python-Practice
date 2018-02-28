@@ -1,2 +1,7 @@
 ## **Tutoril:**  
 [Dictionaries](https://www.python-course.eu/dictionaries.php)
+[Loops](https://www.tutorialspoint.com/python/python_for_loop.htm)
+
+
+## **Tools:**
+[Python Online Compiler](https://www.jdoodle.com/python-programming-online)
