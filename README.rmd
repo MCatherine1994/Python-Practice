@@ -1,5 +1,5 @@
 ## **Tutoril:**  
-[Dictionaries](https://www.python-course.eu/dictionaries.php)
+[Dictionaries](https://www.python-course.eu/dictionaries.php)  
 [Loops](https://www.tutorialspoint.com/python/python_for_loop.htm)
 
 
