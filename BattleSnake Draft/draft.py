@@ -1,3 +1,6 @@
+import bottle
+import os
+import random
 
 ENEMY = 1
 WALL = 2
@@ -8,9 +11,9 @@ from random import randint
 @bottle.post('/move')
 def move():
     data = bottle.request.json
-	
+#-------------------add code-------------------------------------------------------------------#	
 	board_width = data.get('width')
-    board_height = data.get('height')
+    	board_height = data.get('height')
 	
 	board = [[0 for x in xrange(board_height)] for y in xrange(board_width)]
 
