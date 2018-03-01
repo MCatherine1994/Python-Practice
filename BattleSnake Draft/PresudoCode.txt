@@ -1,0 +1,73 @@
+path = movetoFood(directions, head, my_food_list):
+
+if foodx = headx means need to move up or down
+	
+	if foody < heady means need to move up
+	
+		#check direction(which direction our snake can go)
+		if direction contains 'up' then just return up
+
+		else find the other_path
+
+	if foody > heady means need to move down
+
+		#check direction(which direction our snake can go)
+		if direction contains 'down' then just return up
+
+		else find the other_path
+
+if foody = heady means need to left or right
+	if foodX < headx means need to move left
+	
+		#check direction(which direction our snake can go)
+		if direction contains 'left' then just return left
+
+		else find the other_path
+
+	if foodx > headx means need to move right
+
+		#check direction(which direction our snake can go)
+		if direction contains 'right' then just return up
+
+		else find the other_path
+
+
+if foodx < headx means need to move left
+
+	if foody < heady means need to move up
+		
+		# check direction (which direction our snake can go)
+		if direction contains 'up' or 'left' then just return either one
+
+		else find the other_path
+
+	if foody > heady means need to move down
+		
+		# check direction (which direction our snake can go)
+		if direction contains 'left' or 'down' then just return either one
+
+		else find the other_path
+
+		
+if foodx > headx means need to move right
+	
+		
+	if foody < heady means need to move up
+		
+		# check direction (which direction our snake can go)
+		if direction contains 'up' or 'right' then just return either one
+
+		else find the other_path
+
+	if foody > heady means need to move down
+		
+		# check direction (which direction our snake can go)
+		if direction contains 'right' or 'down' then just return either one
+
+		else find the other_path
+
+
+
+
+find the other_path(directions): 
+move to the direction that can move, then recall movetoFood()
