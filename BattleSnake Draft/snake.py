@@ -233,37 +233,58 @@ def find_best_direction(directions, head, my_food_list):
     return direction
 	
 	
-#get the new location of the enemy snake
-def get_new_enemy_body_list(enemy_body_list):
-	for each_snake in enemy_body_list:
-		for each_segment in range(len(each_snake)-1):
-			if each_segment == 0:
-				
-
-	
+#get the new location of the each single snake
+def next_new_body_list(head, body_list):
+    new_body_list = []
+    for each_segment in enemy_body_list:
+	for index in range(len(enemy_body_list)):
+            if index==0:
+                new_body_list.append(head)
+            else:
+                new_body_list.append(index-1)
+     return new_body_list               
+					
 #compare which next_move_location has the higher secure_level	
-def set_security(self_head, enemy_body_list, round):
-	global board
-	global secure_level
-	forcast_board = [[0 for x in range(board_width)] for y in range(board_height)] 
-	#first find the next possible location for our snake head
-	self_next_location = next_move_location(self_head)
-	new_enemy_body_list = get_new_enemy_body_list(enemy_body_list)
+def set_security(my_body_list, enemy_body_list, round):
+    global board
+    global secure_level
+    forcast_board = [[0 for x in range(board_width)] for y in range(board_height)]
+    #first find the next possible location for our snake head
+    my_head = []
+    my_head.append(my_body_list[0][0])
+    my_head.append(my_body_list[0][1])
+    self_head_next_location = next_move_location(my_head)
+    new_my_body_list = []
+    #for each possible location for self snake head
+    for each_location in self_head_next_location:
+        new_each_my_body_list = next_new_body_list(each_location, my_body_list)
+        new_my_body_list.append(new_each_my_body_list) #new_my_body_list e.g. [[[2,3],[2,3],2], [3,4],[3,5],2] two possible location
+    #for each snake in the enemy_body
+    for each_snake in enemy_body_list:
+        snake_head = []
+        snake_head.append(each_snake[0][0])
+        snake_head.append(each_snake[0][1])
+        snake_head_next_location = next_move_locaion(snake_head)
+        for each_location in snake_head_next_location:
+            new_each_snake_list = next_move_location(each_location, each_snake)
+            new_enemy_body_list.append(new_each_snake_list)
+    
+    new_enemy_body_list = get_new_enemy_body_list(enemy_body_list)
 	
 	
-	#for each of the next location, check the up,down,left,right to see if there is an enemy 
-	for next_location in self_next_location:
-		segx = next_location[0]
-		segy = next_location[1]
-		#check the right and check if it is the original head
-		if board[segx+1][segy] == 1 and segx+1 != self_head[0]:
-			secure_level[segx][segy] = round  #(pass 1 if test the first step, add one after each round)
-		#check the left and check if it is the original head	
-		elif board[segx-1][segy] == 1 and segx-1 != self_head[0]:
-			secure_level[segx][segy] = round 
-		#check the up and check if it is the original head
-		elif board[segx][segy-1] == 1 and segy-1 != self_head[0]:
-			secure_level[segx][segy] = round	
+    #for each of the next location, check the up,down,left,right to see if there is an enemy 
+    for next_location in self_next_location:
+    	segx = next_location[0]
+    	segy = next_location[1]
+    	#check the right and check if it is the original head
+    	if board[segx+1][segy] == 1 and segx+1 != self_head[0]:
+    	    secure_level[segx][segy] = round  #(pass 1 if test the first step, add one after each round)
+    	#check the left and check if it is the original head	
+    	elif board[segx-1][segy] == 1 and segx-1 != self_head[0]:
+            secure_level[segx][segy] = round 
+	#check the up and check if it is the original head
+	elif board[segx][segy-1] == 1 and segy-1 != self_head[0]:
+	    secure_level[segx][segy] = round	
 
 
 @bottle.post('/end')
