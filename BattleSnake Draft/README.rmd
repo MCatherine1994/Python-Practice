@@ -1,4 +1,4 @@
-### **This is a simple start tutorial to introduce the steps to run the BattleSnake 2018 Server**  
+### **This is a simple start tutorial to introduce the steps to run the BattleSnake 2018 Server and the Ideas to improve the proformance**  
 #### For more information about the python program, please see the [BattleSnake Project](https://github.com/BATSnake/battlesnake-python) in the organization.  
   
 ### **Introduction**
