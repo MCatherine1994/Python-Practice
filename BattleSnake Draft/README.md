@@ -11,7 +11,7 @@ All the following steps are working on the 2018 BattleSanke Server. Server for e
 * experience [deploying Python apps to Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction)---this one is for deploying your project so that other authentication part can run your code. You will need this for the competition.
 * [pip](https://pip.pypa.io/en/latest/installing.html) to install Python dependencies  
 
-#### **Steps**  
+#### **Steps:**  
 1) [Fork this repo](https://github.com/sendwithus/battlesnake-python/fork). (Fork from official site please, and be careful the year.)  
 
 2) Clone repo to your development environment: (This step is cloneing a local version of your project.)  
@@ -30,7 +30,7 @@ python app/main.py
 ```
 5) Test client in your browser: [http://localhost:8080](http://localhost:8080)
 
-#### **Now you want to test your snake on the server** (This is for mac, for windows please see the instruction from offical site)
+#### **Now you want to test your snake on the server:** (This is for mac, for windows please see the instruction from offical site)
 1) [Install Docker](https://docs.docker.com/install/)
 
 2) Run: docker pull sendwithus/battlesnake-server 
@@ -72,7 +72,7 @@ Read the Heroku tutorial in the previous (You need...) section
   
   
 ### **The following part will introduce the ideas of our snake and what need to improve**  
-#### **Steps of how we build our snake**  
+#### **Steps of how we build our snake:**  
 1) Run and test the server to see how the board looks like and how the snake suppose to move.  
 2) Read the tutorial of [bottle web framework](http://bottlepy.org/docs/dev/index.html) and try to understand how it works.  
 3) After know how our program is going to respone the server request, now it is the time to think of the algorithm.  
@@ -88,9 +88,10 @@ Read the Heroku tutorial in the previous (You need...) section
 6) Create a method to define the way the snake move, track the location of the snake and let it turns around when it comes to the wall  
 7) Assign security level by forcast the next 5 round move (This method takes time and need to be improved)  
   
-#### **What needs to improve**  
+#### **What needs to improve:**  
 1) Design a proper self loop method and let the snake move towards it tail  
 2) Apply different strategy during different stage (eg. At the very begining, try to eat food. When the health value is high enough, maybe could do the self loop to protect ourself. And when there is a snake coming close, move to a safe plave. When the length is long enough, try to cut other snake's trail)  
   
-#### **Problems encountered**  
+#### **Problems encountered:**  
 We have a quite perfect idea to calculate the route of our sanke using BFS, and we do have the draft code. But the program using BFS takes a really long time that we can not sure if we could send response back in the certain amount time.  
+Even the method we currently use has the same problem. When we are trying to forcast the next 10 round movemnet for all snake, it will take a long time, which is not what we expected.
