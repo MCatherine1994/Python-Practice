@@ -76,8 +76,14 @@ Read the Heroku tutorial in the previous (You need...) section
 1) Run and test the server to see how the board looks like and how the snake suppose to move.  
 2) Read the tutorial of [bottle web framework](http://bottlepy.org/docs/dev/index.html) and try to understand how it works.  
 3) After know how our program is going to respone the server request, now it is the time to think of the algorithm.  
-   Our goals to achieve:  
+   **Our goals to achieve:**  
    a. Read all information provide in the server request (eg. snake id, position, health, length and food position)  
-   b. Create a board to store all the location information and assign them different value, and let the snake won't go through the wall.    c.
-
-4) 
+   b. Let the snake won't go through the wall  
+   c. Let the snake eat food  
+   d. Let the snake won't eat itself (This is not easy to achieve when the snake grows bigger)  
+   e. Forcast the movements  
+   f. Assign security value to each grid and let the snake move based on security level  
+4) Create severl lists to store the snake information and food information  
+5) Create a board to store position information and assign different value based on what is in the grid and what is going to be in the grid  
+6) Create a method to define the way the snake move, track the location of the snake and let it turns around when it comes to the wall  
+7)
