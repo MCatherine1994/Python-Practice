@@ -1,4 +1,30 @@
-### **This is a simple start tutorial to introduce the steps to run the BattleSnake 2018 Server and the Ideas to improve the proformance**  
-#### For more information about the python program, please see the [BattleSnake Project](https://github.com/BATSnake/battlesnake-python) in the organization.  
+### **This is a simple start tutorial to introduce the steps to run the BattleSnake 2018 Server and the ideas to improve the proformance**  
+##### All the python program here are drafts, for more information about the python program and the complete version, please see the [BattleSnake Project](https://github.com/BATSnake/battlesnake-python) in the organization. That is a beginner semi-final level snake. 
   
 ### **Introduction**
+Information about the BattleSnake competition, please see the the officail website: https://www.battlesnake.io/.  
+All the following steps are working on the 2018 BattleSanke Server. Server for each year maybe different. Please read the full instrunction from [sendwithus](https://github.com/sendwithus). For the full document for 2018, see from [here](https://github.com/sendwithus/battlesnake). Please follow the instruction from sendwithus first, cause you need to fork the project from them, and this document will just share wome experience. Please do not relay on this document.  
+  
+### **Run your snake locally**  
+#### **You need...**  
+* a working Python 2.7 development environment ([getting started guide](http://hackercodex.com/guide/python-development-environment-on-mac-osx/))
+* experience [deploying Python apps to Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction)---this one is for deploying your project so that other authentication part can run your code. You will need this for the competition.
+* [pip](https://pip.pypa.io/en/latest/installing.html) to install Python dependencies  
+#### **Steps**  
+1) [Fork this repo](https://github.com/sendwithus/battlesnake-python/fork).(Fork from official site please, please be careful the year.)  
+
+2) Clone repo to your development environment: (This step is cloneing a local version of your project.)  
+```
+git clone git@github.com:username/battlesnake-python.git
+```
+
+3) Install dependencies using [pip](https://pip.pypa.io/en/latest/installing.html):
+```
+pip install -r requirements.txt
+```
+
+4) Run local server:
+```
+python app/main.py
+```
+5) Test client in your browser: [http://localhost:8080](http://localhost:8080).
