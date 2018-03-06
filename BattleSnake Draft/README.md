@@ -3,7 +3,7 @@
   
 ### **Introduction**
 Information about the BattleSnake competition, please see the the officail website: https://www.battlesnake.io/.  
-All the following steps are working on the 2018 BattleSanke Server. Server for each year maybe different. Please read the full instrunction from [sendwithus](https://github.com/sendwithus). For the full document for 2018, see from [here](https://github.com/sendwithus/battlesnake). Please follow the instruction from sendwithus first, cause you need to fork the project from them, and this document will just share wome experience. Please do not relay on this document.  
+All the following steps are working on the 2018 BattleSanke Server. Server for each year maybe different. Please read the full instrunction from [sendwithus](https://github.com/sendwithus). For the full document for 2018, see from [here](https://github.com/sendwithus/battlesnake). Please follow the instruction from sendwithus first, cause you need to fork the project from them, and this document will just share some experience. Please do not relay on this document.  
   
 ### **Run your snake locally**  
 #### **You need...**  
@@ -33,8 +33,40 @@ python app/main.py
 #### **Now you want to test your snake on the server** (This is for mac, for windows please see the instruction from offical site)
 1) [Install Docker](https://docs.docker.com/install/)
 
-2) Run docker pull sendwithus/battlesnake-server 
+2) Run: docker pull sendwithus/battlesnake-server 
 This is to update the server to the latest version  
 
-3) 
+3) Run: docker run -it --rm -p 3000:3000 sendwithus/battlesnake-server  
+Start the server  
+
+4) Visit: http://localhost:3000/, then you will see the front page to allow you create a new game
+
+5) The URL for your snake is http://[you local ip addrss]:8080, remember to enter a name fieldd just next to url field (if you forget to enter the name, your snake will only move one step). You could find out your local ip address by typing "ifconfig" at the terminal  
+
+6) Now you are ready to test your snake  
+  
+  
+### **Deploy your sanke to Heroku**  
+##### You need to do this so that other authentication part(like sendwithus) can run your snake  
+1) Create a new Heroku app:
+```
+heroku create [APP_NAME]
+```
+
+2) Deploy code to Heroku servers:
+```
+git push heroku master
+```
+
+3) Open Heroku app in browser:
+```
+heroku open
+```
+or visit [http://APP_NAME.herokuapp.com](http://APP_NAME.herokuapp.com).
+
+4) View server logs with the `heroku logs` command:
+```
+heroku logs --tail
+```
+Read the Heroku tutorial in the previous (You need...) section  
 
