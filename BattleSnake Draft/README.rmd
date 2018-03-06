@@ -10,8 +10,9 @@ All the following steps are working on the 2018 BattleSanke Server. Server for e
 * a working Python 2.7 development environment ([getting started guide](http://hackercodex.com/guide/python-development-environment-on-mac-osx/))
 * experience [deploying Python apps to Heroku](https://devcenter.heroku.com/articles/getting-started-with-python#introduction)---this one is for deploying your project so that other authentication part can run your code. You will need this for the competition.
 * [pip](https://pip.pypa.io/en/latest/installing.html) to install Python dependencies  
+
 #### **Steps**  
-1) [Fork this repo](https://github.com/sendwithus/battlesnake-python/fork).(Fork from official site please, please be careful the year.)  
+1) [Fork this repo](https://github.com/sendwithus/battlesnake-python/fork). (Fork from official site please, and be careful the year.)  
 
 2) Clone repo to your development environment: (This step is cloneing a local version of your project.)  
 ```
@@ -27,4 +28,13 @@ pip install -r requirements.txt
 ```
 python app/main.py
 ```
-5) Test client in your browser: [http://localhost:8080](http://localhost:8080).
+5) Test client in your browser: [http://localhost:8080](http://localhost:8080)
+
+#### **Now you want to test your snake on the server** (This is for mac, for windows please see the instruction from offical site)
+1) [Install Docker](https://docs.docker.com/install/)
+
+2) Run docker pull sendwithus/battlesnake-server 
+This is to update the server to the latest version  
+
+3) 
+
