@@ -71,7 +71,7 @@ heroku logs --tail
 Read the Heroku tutorial in the previous (You need...) section  
   
   
-### **The following part will introduce the ideas of our snake and what need to improve**  
+### **The following part will introduce the ideas of our snake and what needs to improve**  
 #### **Steps of how we build our snake:**  
 1) Run and test the server to see how the board looks like and how the snake suppose to move.  
 2) Read the tutorial of [bottle web framework](http://bottlepy.org/docs/dev/index.html) and try to understand how it works.  
