@@ -69,4 +69,15 @@ or visit [http://APP_NAME.herokuapp.com](http://APP_NAME.herokuapp.com).
 heroku logs --tail
 ```
 Read the Heroku tutorial in the previous (You need...) section  
+  
+  
+### **The following part will introduce the ideas of our snake and what need to improve**  
+#### **Steps of how we build our snake**  
+1) Run and test the server to see how the board looks like and how the snake suppose to move.  
+2) Read the tutorial of [bottle web framework](http://bottlepy.org/docs/dev/index.html) and try to understand how it works.  
+3) After know how our program is going to respone the server request, now it is the time to think of the algorithm.  
+   Our goals to achieve:  
+   a. Read all information provide in the server request (eg. snake id, position, health, length and food position)  
+   b. Create a board to store all the location information and assign them different value, and let the snake won't go through the wall.    c.
 
+4) 
