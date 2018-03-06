@@ -77,7 +77,7 @@ Read the Heroku tutorial in the previous (You need...) section
 2) Read the tutorial of [bottle web framework](http://bottlepy.org/docs/dev/index.html) and try to understand how it works.  
 3) After know how our program is going to respone the server request, now it is the time to think of the algorithm.  
    **Our goals to achieve:**  
-   a. Read all information provide in the server request (eg. snake id, position, health, length and food position)  
+   a. Read all information provided in the server request (eg. snake id, position, health, length and food position)  
    b. Let the snake won't go through the wall  
    c. Let the snake eat food  
    d. Let the snake won't eat itself (This is not easy to achieve when the snake grows bigger)  
@@ -86,4 +86,11 @@ Read the Heroku tutorial in the previous (You need...) section
 4) Create severl lists to store the snake information and food information  
 5) Create a board to store position information and assign different value based on what is in the grid and what is going to be in the grid  
 6) Create a method to define the way the snake move, track the location of the snake and let it turns around when it comes to the wall  
-7)
+7) Assign security level by forcast the next 5 round move (This method takes time and need to be improved)  
+  
+#### **What needs to improve**  
+1) Design a proper self loop method and let the snake move towards it tail  
+2) Apply different strategy during different stage (eg. At the very begining, try to eat food. When the health value is high enough, maybe could do the self loop to protect ourself. And when there is a snake coming close, move to a safe plave. When the length is long enough, try to cut other snake's trail)  
+  
+#### **Problems encountered**  
+We have a quite perfect idea to calculate the route of our sanke using BFS, and we do have the draft code. But the program using BFS takes a really long time that we can not sure if we could send response back in the certain amount time.  
