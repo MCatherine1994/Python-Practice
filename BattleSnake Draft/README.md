@@ -83,7 +83,7 @@ Read the Heroku tutorial in the previous (You need...) section
    d. Let the snake won't eat itself (This is not easy to achieve when the snake grows bigger)  
    e. Forcast the movements  
    f. Assign security value to each grid and let the snake move based on security level  
-4) Create severl lists to store the snake information and food information  
+4) Create several lists to store the snake information and food information  
 5) Create a board to store position information and assign different value based on what is in the grid and what is going to be in the grid  
 6) Create a method to define the way the snake move, track the location of the snake and let it turns around when it comes to the wall  
 7) Assign security level by forcast the next 5 round move (This method takes time and need to be improved)  
@@ -93,5 +93,5 @@ Read the Heroku tutorial in the previous (You need...) section
 2) Apply different strategy during different stage (eg. At the very begining, try to eat food. When the health value is high enough, maybe could do the self loop to protect ourself. And when there is a snake coming close, move to a safe plave. When the length is long enough, try to cut other snake's trail)  
   
 #### **Problems encountered:**  
-We have a quite perfect idea to calculate the route of our sanke using BFS, and we do have the draft code. But the program using BFS takes a really long time that we can not sure if we could send response back in the certain amount time.  
+We have a quite perfect idea to calculate the route of our snake using BFS, and we do have the draft code. But the program using BFS takes a really long time that we can not sure if we could send response back in the certain amount time.  
 Even the method we currently use has the same problem. When we are trying to forcast the next 10 round movemnet for all snake, it will take a long time, which is not what we expected.
