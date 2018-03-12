@@ -41,7 +41,7 @@ Start the server
 
 4) Visit: http://localhost:3000/, then you will see the front page to allow you create a new game
 
-5) The URL for your snake is http://[you local ip addrss]:8080, remember to enter a name fieldd just next to url field (if you forget to enter the name, your snake will only move one step). You could find out your local ip address by typing "ifconfig" at the terminal. "8080" here is the port number, which you could change in your code.    
+5) The URL for your snake is http://[you local ip addrss]:8080, remember to enter a name field just next to url field (if you forget to enter the name, your snake will only move one step). You could find out your local ip address by typing "ifconfig" at the terminal. "8080" here is the port number, which you could change in your code.    
 
 6) Now you are ready to test your snake  
   
